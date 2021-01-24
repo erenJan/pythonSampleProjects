@@ -29,9 +29,7 @@ img_path = os.path.join("resources", "corona.ico")
 
 while(True):
     notification.notify(
-        #title of the notification,
         title = "COVID19 Stats",
-        #the body of the notification
         message = "Today cases : {new_case}\nToday deaths : {new_deaths}\nActive cases : {active}\nTotal deaths : {total_deaths}\nTotal recovered : {recovered}".format(
             new_case = new,
             new_deaths = today_deaths,
@@ -39,10 +37,7 @@ while(True):
             total_deaths = total_deaths,
             recovered = recovered
         ),  
-        #creating icon for the notification
-        #we need to download a icon of ico file format
         app_icon = img_path,
-        # the notification stays for 50sec
         timeout  = 60
     )
     time.sleep(60*60*12)
